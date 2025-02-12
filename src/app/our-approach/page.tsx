@@ -7,7 +7,7 @@ import Image from "next/image";
 import React from "react";
 import Cover from "@/assets/ybme-approach.png";
 
-function ResponsibleSourcing() {
+function OurApproach() {
   const { lang } = useLang();
   const t = trad[lang];
   return (
@@ -23,7 +23,7 @@ function ResponsibleSourcing() {
         </div>
       </div>
 
-      <p className="text-lg lg:text-xl text-center font-lexend-giga px-4 lg:px-0">
+      <p className="lg:text-xl text-center font-lexend-giga px-4 lg:px-0">
         {t.approach.intro}
       </p>
 
@@ -69,11 +69,11 @@ function ResponsibleSourcing() {
         })}
       </div>
 
-      <p className="text-lg lg:text-xl text-center font-lexend-giga px-4 lg:px-0">
+      <p className="lg:text-xl text-center font-lexend-giga px-4 lg:px-0">
         {t.approach.outro}
       </p>
     </MaxWidthWrapper>
   );
 }
 
-export default ResponsibleSourcing;
+export default OurApproach;

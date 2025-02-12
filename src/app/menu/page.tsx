@@ -7,13 +7,14 @@ import Image from "next/image";
 import React from "react";
 import Cover from "@/assets/ybme-menu.png";
 import trad from "@/locales/trad";
+import { Leaf01Icon } from "hugeicons-react";
 
 function Menu() {
   const { lang } = useLang();
   const t = trad[lang];
 
   return (
-    <MaxWidthWrapper className="flex flex-col items-start gap-12 w-full pb-48 text-text-drk">
+    <MaxWidthWrapper className="flex flex-col items-start gap-12 w-full pb-24 lg:pb-48 text-text-drk">
       <div
         className="w-full bg-cover bg-bottom bg-no-repeat"
         style={{ backgroundImage: `url(${Cover.src})` }}
@@ -59,8 +60,16 @@ function Menu() {
                       </div>
 
                       <div className="item-price">
-                        <span className="price">{item.price}</span>
-                        <span className="price">€</span>
+                        {item.isVeggyfriendly ? (
+                          <span className="text-green-700 text-xs lg:text-sm inline-flex items-center gap-1 border border-green-700 rounded-md px-2 py-1">
+                            <Leaf01Icon className="size-4" />
+                            {t.menu.veggie}
+                          </span>
+                        ) : (
+                          <span></span>
+                        )}
+
+                        <span className="price">{item.price}€</span>
                       </div>
                     </div>
                   </div>

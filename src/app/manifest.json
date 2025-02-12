@@ -1,0 +1,16 @@
+{
+  "name": "YBME",
+  "short_name": "YBME",
+  "description": "Your Best Meal Ever",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffcf2",
+  "theme_color": "#fffcf2",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

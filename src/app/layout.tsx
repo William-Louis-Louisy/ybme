@@ -1,18 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lexend_Giga } from "next/font/google";
+import { Lexend_Giga } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/navigation/Header";
 import { LangProvider } from "@/contexts/LangContext";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const lexendGiga = Lexend_Giga({
   variable: "--font-lexend-giga",
@@ -22,6 +12,10 @@ const lexendGiga = Lexend_Giga({
 export const metadata: Metadata = {
   title: "YBME",
   description: "Your Best Meal Ever",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -31,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${lexendGiga.variable}`}
-      >
+      <body className={`${lexendGiga.variable}`}>
         <LangProvider>
           <Header />
           {children}

@@ -21,7 +21,7 @@ function Landing({ image }: LandingProps) {
         </h2>
 
         <Link
-          className="bg-gradient-to-br from-65% to-35% from-ivory to-dark-ivory px-12 py-3 rounded-md text-text-drk font-semibold text-lg text-center uppercase"
+          className="block lg:hidden bg-gradient-to-br from-65% to-35% from-ivory to-dark-ivory px-12 py-3 rounded-md text-text-drk font-semibold font-lexend-giga text-center uppercase"
           href={"/menu"}
         >
           menu

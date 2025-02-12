@@ -56,6 +56,27 @@ export const LangProvider: React.FC<LangProviderProps> = ({ children }) => {
     }
   };
 
+  // Navigator language detection
+  useEffect(() => {
+    // If no language is stored and the navigator is defined
+    if (!localStorage.getItem("lang") && typeof navigator !== "undefined") {
+      const browserLang = navigator.language.split("-")[0];
+      // If the browser language is not Dutch, we store English
+      if (browserLang !== "nl") {
+        storeLang("en");
+      }
+    }
+    // Otherwise, we load the language from the storage
+    else {
+      loadLangFromStorage();
+    }
+  }, []);
+
+  // Set the lang attribute of the html element
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   return (
     <LangContext.Provider
       value={{ lang, loadLangFromStorage, setLang, storeLang }}

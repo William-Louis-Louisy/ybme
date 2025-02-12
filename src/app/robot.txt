@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ybme.vercel.app/sitemap.xml

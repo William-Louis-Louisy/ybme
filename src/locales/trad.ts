@@ -20,6 +20,7 @@ export const trad: {
     },
     menu: {
       title: "Menu",
+      veggie: "Veggie friendly",
     },
     approach: {
       title: "Our Approach to Quality, \nTraceability and Sustainability",
@@ -53,6 +54,7 @@ export const trad: {
     },
     menu: {
       title: "Menu",
+      veggie: "Veggie vriendelijk",
     },
     approach: {
       title: "Onze Benadering van Kwaliteit, \nTraceerbaarheid en Duurzaamheid",
