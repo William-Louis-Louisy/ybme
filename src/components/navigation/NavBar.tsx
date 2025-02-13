@@ -20,7 +20,7 @@ function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-ivory shadow sticky inset-x-0 top-0 z-50 flex items-center justify-between h-16 "
+      className="bg-ivory shadow sticky inset-x-0 top-0 z-50"
     >
       {({ open }) => (
         <>
