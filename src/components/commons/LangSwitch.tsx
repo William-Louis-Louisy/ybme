@@ -53,15 +53,15 @@ export default function LangSwitch() {
     <div>
       <Menu as="div" className="relative -mr-px block text-text-drk">
         <MenuButton className="inline-flex items-center gap-2 bg-dark-ivory px-3 py-2 rounded-lg shadow-inner">
-          <span className="sr-only">Choisissez votre langue</span>
+          <span className="sr-only">Choose your language</span>
           <ArrowDown01Icon
             className="h-5 w-5 hidden lg:block"
             aria-hidden="true"
           />
           <div className="uppercase flex flex-row items-center gap-2">
-            <span className="block text-sm font-lexend-giga">
+            {/* <span className="block text-xs font-lexend-giga">
               {selectedLang.short}
-            </span>
+            </span> */}
             <Image
               src={selectedLang.flagUrl}
               alt={selectedLang.name}
@@ -70,6 +70,7 @@ export default function LangSwitch() {
             />
           </div>
         </MenuButton>
+
         <Transition
           as={Fragment}
           enter="transition ease-out duration-100"

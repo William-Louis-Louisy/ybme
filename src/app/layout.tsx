@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Lexend_Giga } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/navigation/Header";
 import { LangProvider } from "@/contexts/LangContext";
+import NavBar from "@/components/navigation/NavBar";
 
 const lexendGiga = Lexend_Giga({
   variable: "--font-lexend-giga",
@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="nl">
       <body className={`${lexendGiga.variable}`}>
         <LangProvider>
-          <Header />
+          <NavBar />
           {children}
         </LangProvider>
       </body>

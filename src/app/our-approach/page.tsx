@@ -17,13 +17,13 @@ function OurApproach() {
         style={{ backgroundImage: `url(${Cover.src})` }}
       >
         <div className="w-full flex justify-center px-4 py-12 lg:px-12 lg:py-16 text-ivory bg-blk/55">
-          <h1 className="text-xl lg:text-6xl font-black w-full text-center whitespace-pre-line font-lexend-giga px-4 lg:px-0">
+          <h1 className="text-xl lg:text-6xl font-black w-full text-center whitespace-pre-line font-lexend-giga px-4">
             {t.approach.title}
           </h1>
         </div>
       </div>
 
-      <p className="lg:text-xl text-center font-lexend-giga px-4 lg:px-0">
+      <p className="lg:text-xl text-center font-lexend-giga px-4">
         {t.approach.intro}
       </p>
 
@@ -32,7 +32,7 @@ function OurApproach() {
           return (
             <div
               key={partner.title.en}
-              className="text-ivory lg:text-text-drk flex flex-col odd:lg:flex-row even:lg:flex-row-reverse items-start pb-12 lg:py-12 gap-4 lg:gap-12"
+              className="text-ivory lg:text-text-drk flex flex-col odd:lg:flex-row even:lg:flex-row-reverse items-start pb-12 lg:py-12 gap-4 lg:gap-12 lg:px-4"
             >
               <div
                 className={`relative w-full h-svw lg:w-2/5 lg:h-96 lg:rounded-xl overflow-hidden ${
@@ -48,7 +48,7 @@ function OurApproach() {
               </div>
 
               <div
-                className={`flex flex-col gap-4 lg:py-12 max-w-full lg:max-w-3/5 px-4 lg:px-0 ${
+                className={`flex flex-col gap-4 lg:py-12 max-w-full lg:max-w-3/5 px-4 ${
                   index % 2 === 0 ? "rightSlideIn" : "leftSlideIn"
                 }`}
               >
@@ -69,7 +69,7 @@ function OurApproach() {
         })}
       </div>
 
-      <p className="lg:text-xl text-center font-lexend-giga px-4 lg:px-0">
+      <p className="lg:text-xl text-center font-lexend-giga px-4">
         {t.approach.outro}
       </p>
     </MaxWidthWrapper>
