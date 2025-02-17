@@ -8,7 +8,7 @@ import About from "@/components/sections/About";
 import Landing from "@/components/sections/Landing";
 export default function HomePage() {
   return (
-    <div className="flex flex-col items-center h-[calc(100dvh-4rem)] no-scrollbar scroll-smooth overflow-y-scroll snap-y snap-mandatory">
+    <div className="flex flex-col items-center h-screen no-scrollbar scroll-smooth overflow-y-scroll snap-y snap-mandatory">
       <Landing image={LandingImg} />
       <About image={KitchenImg} />
       <Contact backgroundImage={FacadeImg.src} />

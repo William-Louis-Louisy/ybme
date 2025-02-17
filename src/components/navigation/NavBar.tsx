@@ -18,13 +18,10 @@ function NavBar() {
   const { lang } = useLang();
   const t = trad[lang];
   return (
-    <Disclosure
-      as="nav"
-      className="bg-ivory shadow sticky inset-x-0 top-0 z-50"
-    >
+    <Disclosure as="nav" className="bg-ivory shadow fixed inset-x-0 top-0 z-50">
       {({ open }) => (
         <>
-          <MaxWidthWrapper className="px-4">
+          <MaxWidthWrapper className="px-4 md:px-0">
             <div className="flex h-16 justify-between gap-12">
               <div className="flex justify-between w-full">
                 <div className="flex flex-shrink-0 items-center">
@@ -61,7 +58,6 @@ function NavBar() {
               </div>
             </div>
           </MaxWidthWrapper>
-
           <DisclosurePanel className="sm:hidden absolute w-full flex flex-col gap-12 items-center justify-center h-[calc(100dvh-4rem)] bg-ivory z-50">
             <div className="flex flex-col items-center gap-12 pt-2 pb-3">
               {navigation.main.map((item) => {

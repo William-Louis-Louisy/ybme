@@ -34,14 +34,12 @@ export default function LangSwitch() {
 
   // Définir la langue courante depuis le localStorage
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const savedLang = localStorage.getItem("lang");
-      if (savedLang) {
-        const langFound = langItems.find((item) => item.short === savedLang);
-        setSelectedLang(langFound || langItems[0]);
-      } else {
-        setSelectedLang(langItems[0]);
-      }
+    const savedLang = localStorage.getItem("lang");
+    if (savedLang) {
+      const langFound = langItems.find((item) => item.short === savedLang);
+      setSelectedLang(langFound || langItems[0]);
+    } else {
+      setSelectedLang(langItems[0]);
     }
   }, []);
 
@@ -80,7 +78,7 @@ export default function LangSwitch() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <MenuItems className="absolute right-0 z-50 mt-3 -mr-1 w-56 origin-top-right rounded-md shadow-lg bg-dark-ivory max-h-[166px] overflow-y-auto no-sccrollbar">
+          <MenuItems className="absolute right-0 z-50 mt-3 -mr-1 w-56 origin-top-right rounded-md shadow-lg bg-dark-ivory max-h-[166px] overflow-y-auto">
             <div className="py-1">
               {langItems.map((item) => (
                 <MenuItem key={item.name}>

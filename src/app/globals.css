@@ -58,11 +58,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: inherit;
+    scrollbar-width: thin;
   }
-}
-
-.contact-card {
-  @apply flex flex-col items-center gap-2 px-4 lg:px-12 py-8 lg:border-t border-ivory;
 }
 
 body {
@@ -71,6 +68,9 @@ body {
   overflow-x: hidden;
 }
 
+.contact-card {
+  @apply flex flex-col items-center gap-2 px-4 lg:px-12 py-8 lg:border-t border-ivory;
+}
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;

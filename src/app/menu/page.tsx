@@ -14,7 +14,7 @@ function Menu() {
   const t = trad[lang];
 
   return (
-    <MaxWidthWrapper className="flex flex-col items-start gap-12 w-full pb-24 lg:pb-48 text-text-drk">
+    <MaxWidthWrapper className="flex flex-col items-start gap-12 w-full mt-16 pb-24 lg:pb-48 text-text-drk">
       <div
         className="w-full bg-cover bg-bottom bg-no-repeat"
         style={{ backgroundImage: `url(${Cover.src})` }}

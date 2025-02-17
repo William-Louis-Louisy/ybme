@@ -11,7 +11,7 @@ function OurApproach() {
   const { lang } = useLang();
   const t = trad[lang];
   return (
-    <MaxWidthWrapper className="flex flex-col items-start gap-12 w-full pb-48 text-text-drk">
+    <MaxWidthWrapper className="flex flex-col items-start gap-12 w-full mt-16 pb-48 text-text-drk">
       <div
         className="w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${Cover.src})` }}
@@ -42,7 +42,7 @@ function OurApproach() {
                 <Image
                   src={partner.image}
                   alt={partner.title[lang]}
-                  className="object-cover"
+                  className="object-cover z-0"
                   fill
                 />
               </div>

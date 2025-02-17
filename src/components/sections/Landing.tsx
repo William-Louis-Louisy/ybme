@@ -12,7 +12,7 @@ function Landing({ image }: LandingProps) {
       className="flex justify-center w-full snap-center bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${image.src})` }}
     >
-      <div className="h-[calc(100dvh-4rem)] flex flex-col gap-16 items-center justify-center w-full bg-gradient-to-t from-blk/85 to-blk/55">
+      <div className="h-screen pt-16 flex flex-col gap-16 items-center justify-center w-full bg-gradient-to-t from-blk/85 to-blk/55">
         <div className="w-full md:w-2xl px-4">
           <Image className="object-contain" src={Logo} alt="logo" />
         </div>

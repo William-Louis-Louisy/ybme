@@ -17,10 +17,10 @@ function Contact({ backgroundImage }: ContactProps) {
 
   return (
     <section
-      className="flex flex-col gap-16 w-full text-text-drk snap-center h-[calc(100dvh-4rem)] bg-cover bg-center bg-no-repeat"
+      className="flex flex-col gap-16 w-full text-text-drk snap-center h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="flex flex-col items-center justify-between lg:justify-end h-[calc(100dvh-4rem)] pt-20 lg:py-20 bg-gradient-to-b lg:bg-gradient-to-t from-blk to-transparent">
+      <div className="flex flex-col items-center justify-center lg:justify-end h-screen pt-16 md:pt-0 lg:py-20 bg-gradient-to-b lg:bg-gradient-to-t from-blk to-transparent">
         <div className="grid grid-rows-3 lg:grid-rows-1 lg:grid-cols-3 justify-center lg:gap-24 text-ivory w-fit">
           <div className="contact-card">
             <div className="font-bold text-lg inline-flex gap-2 uppercase items-center">

@@ -12,9 +12,9 @@ function About({ image }: AboutProps) {
   const t = trad[lang];
 
   return (
-    <section className="relative flex flex-col-reverse md:flex-row justify-between w-full max-w-screen-2xl text-text-drk snap-center h-[calc(100dvh-4rem)]">
+    <section className="relative flex flex-col-reverse pt-16 md:pt-0 md:flex-row justify-between w-full max-w-screen-2xl text-text-drk snap-center h-screen">
       {/* Left panel */}
-      <div className="h-[calc(100dvh-4rem)] md:max-w-3/7 flex flex-col items-center justify-center gap-4 px-4 py-6">
+      <div className="h-screen md:max-w-3/7 flex flex-col items-center justify-center gap-4 px-4 py-6">
         <div className="flex flex-col gap-1">
           <span className="font-bold text-sm lg:text-lg font-lexend-giga">
             {t.home.welcomeT}
@@ -42,7 +42,7 @@ function About({ image }: AboutProps) {
       </div>
 
       {/* Right panel */}
-      <div className="relative hidden md:block md:w-1/2 md:h-[calc(100dvh-4rem)]">
+      <div className="relative hidden md:block md:w-1/2 md:h-screen">
         <Image
           className="object-cover"
           src={image}
