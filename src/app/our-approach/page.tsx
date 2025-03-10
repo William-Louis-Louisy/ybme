@@ -27,15 +27,15 @@ function OurApproach() {
         {t.approach.intro}
       </p>
 
-      <div className="flex flex-col items-start w-full gap-12 md:gap-0 bg-blk md:bg-transparent">
+      <div className="flex flex-col items-start w-full gap-12 lg:gap-0 bg-blk lg:bg-transparent">
         {partners.map((partner, index) => {
           return (
             <div
               key={partner.title.en}
-              className="text-ivory md:text-text-drk flex flex-col odd:md:flex-row even:md:flex-row-reverse items-start pb-12 gap-4 md:gap-4 lg:gap-12 md:px-4"
+              className="text-ivory lg:text-text-drk flex flex-col odd:lg:flex-row even:lg:flex-row-reverse items-start md:items-center md:first:pt-12 pb-12 gap-4 lg:gap-12 lg:px-4"
             >
               <div
-                className={`relative w-full h-svw md:w-2/5 md:h-96 md:rounded-xl overflow-hidden ${
+                className={`relative w-full h-svw md:h-96 md:w-96 lg:w-2/5 lg:h-96 lg:rounded-xl overflow-hidden ${
                   index % 2 === 0 ? "leftSlideIn" : "rightSlideIn"
                 }`}
               >
@@ -48,7 +48,7 @@ function OurApproach() {
               </div>
 
               <div
-                className={`flex flex-col gap-4 md:py-12 max-w-full md:max-w-3/5 px-4 ${
+                className={`flex flex-col gap-4 lg:py-12 max-w-full lg:max-w-3/5 px-4 ${
                   index % 2 === 0 ? "rightSlideIn" : "leftSlideIn"
                 }`}
               >
