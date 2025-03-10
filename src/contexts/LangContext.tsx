@@ -1,11 +1,13 @@
 "use client";
 import { useState, useContext, createContext, useEffect } from "react";
 
+export type Lang = "en" | "nl";
+
 interface ILangContext {
-  lang: string;
+  lang: Lang;
   loadLangFromStorage: () => void;
-  setLang: (lang: string) => void;
-  storeLang: (lang: string) => void;
+  setLang: (lang: Lang) => void;
+  storeLang: (lang: Lang) => void;
 }
 
 interface LangProviderProps {
@@ -23,13 +25,13 @@ export const useLang = () => {
 };
 
 export const LangProvider: React.FC<LangProviderProps> = ({ children }) => {
-  const [lang, setLang] = useState<string>("nl");
+  const [lang, setLang] = useState<Lang>("nl");
 
   // GET LANG FROM LOCAL STORAGE
   const loadLangFromStorage = () => {
     if (typeof window !== "undefined") {
       try {
-        const savedLang = localStorage.getItem("lang");
+        const savedLang = localStorage.getItem("lang") as Lang | null;
         if (savedLang) {
           setLang(savedLang);
         }
@@ -47,7 +49,7 @@ export const LangProvider: React.FC<LangProviderProps> = ({ children }) => {
   }, []);
 
   // STORE LANG IN LOCAL STORAGE
-  const storeLang = (lang: string) => {
+  const storeLang = (lang: Lang) => {
     try {
       localStorage.setItem("lang", lang);
       setLang(lang);

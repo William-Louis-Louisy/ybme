@@ -19,8 +19,8 @@ function Menu() {
         className="w-full bg-cover bg-bottom bg-no-repeat"
         style={{ backgroundImage: `url(${Cover.src})` }}
       >
-        <div className="w-full min-h-[208px] md:min-h-[308px] flex items-center justify-center px-4 py-12 lg:px-12 lg:py-16 text-ivory bg-blk/55">
-          <h1 className="text-3xl lg:text-6xl font-black w-full text-center whitespace-pre-line font-lexend-giga px-4 lg:px-0">
+        <div className="w-full h-60 md:h-92 flex items-center justify-center px-4 py-12 lg:px-12 lg:py-16 text-ivory bg-blk/55">
+          <h1 className="text-2xl lg:text-6xl font-black w-full text-center whitespace-pre-line font-lexend-giga px-4 lg:px-0">
             {t.menu.title}
           </h1>
         </div>

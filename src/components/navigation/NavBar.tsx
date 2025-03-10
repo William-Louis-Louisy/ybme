@@ -13,15 +13,18 @@ import LangSwitch from "../commons/LangSwitch";
 import { useLang } from "@/contexts/LangContext";
 import trad from "@/locales/trad";
 import MaxWidthWrapper from "../commons/MaxWidthWrapper";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 function NavBar() {
   const { lang } = useLang();
   const t = trad[lang];
+  const pathname = usePathname();
   return (
     <Disclosure as="nav" className="bg-ivory shadow fixed inset-x-0 top-0 z-50">
       {({ open }) => (
         <>
-          <MaxWidthWrapper className="px-4 md:px-0">
+          <MaxWidthWrapper className="px-4 xl:px-0">
             <div className="flex h-16 justify-between gap-12">
               <div className="flex justify-between w-full">
                 <div className="flex flex-shrink-0 items-center">
@@ -31,12 +34,17 @@ function NavBar() {
                   {navigation.main.map((item) => {
                     return (
                       <Link
-                        key={item.name}
+                        key={item.name.en}
                         href={item.href}
                         passHref
-                        className="text-text-drk font-semibold font-lexend-giga hover:underline hover:text-blk underline-offset-8 decoration-2 duration-200 ease-in"
+                        className={cn(
+                          "text-text-drk font-lexend-giga hover:underline underline-offset-8 decoration-2 duration-100 ease-in",
+                          pathname === item.href
+                            ? "underline font-bold decoration-text-drk"
+                            : "font-semibold decoration-text-drk/50"
+                        )}
                       >
-                        {item.name}
+                        {item.name[lang]}
                       </Link>
                     );
                   })}
@@ -62,9 +70,9 @@ function NavBar() {
             <div className="flex flex-col items-center gap-12 pt-2 pb-3">
               {navigation.main.map((item) => {
                 return (
-                  <Link key={item.name} href={item.href}>
+                  <Link key={item.name.en} href={item.href}>
                     <DisclosureButton className="text-text-drk font-semibold font-lexend-giga hover:underline hover:text-blk underline-offset-8 decoration-2 duration-200 ease-in">
-                      {item.name}
+                      {item.name[lang]}
                     </DisclosureButton>
                   </Link>
                 );

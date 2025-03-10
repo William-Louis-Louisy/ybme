@@ -10,7 +10,7 @@ import {
   Transition,
 } from "@headlessui/react";
 import { ILangItem, langItems } from "@/lib/langItems";
-import { useLang } from "@/contexts/LangContext";
+import { Lang, useLang } from "@/contexts/LangContext";
 import { ArrowDown01Icon } from "hugeicons-react";
 
 export default function LangSwitch() {
@@ -19,8 +19,7 @@ export default function LangSwitch() {
     undefined
   );
 
-  // Gestion du changement de langue
-  const handleLangChange = (langCode: string) => {
+  const handleLangChange = (langCode: Lang) => {
     const langFound = langItems.find(
       (item: ILangItem) => item.short === langCode
     );
@@ -32,7 +31,6 @@ export default function LangSwitch() {
     }
   };
 
-  // Définir la langue courante depuis le localStorage
   useEffect(() => {
     const savedLang = localStorage.getItem("lang");
     if (savedLang) {
@@ -57,9 +55,6 @@ export default function LangSwitch() {
             aria-hidden="true"
           />
           <div className="uppercase flex flex-row items-center gap-2">
-            {/* <span className="block text-xs font-lexend-giga">
-              {selectedLang.short}
-            </span> */}
             <Image
               src={selectedLang.flagUrl}
               alt={selectedLang.name}

@@ -5,6 +5,7 @@ import LangSwitch from "../commons/LangSwitch";
 import { navigation } from "@/lib/navigation";
 import Link from "next/link";
 import { Cancel01Icon, Menu01Icon } from "hugeicons-react";
+import { useLang } from "@/contexts/LangContext";
 
 interface NavMenuProps {
   isOpen: boolean;
@@ -12,6 +13,7 @@ interface NavMenuProps {
 }
 
 function NavMenu({ isOpen, toogleMenu }: NavMenuProps) {
+  const { lang } = useLang();
   return (
     <>
       <div className="hidden lg:inline-flex items-center gap-24">
@@ -19,12 +21,12 @@ function NavMenu({ isOpen, toogleMenu }: NavMenuProps) {
           {navigation.main.map((item) => {
             return (
               <Link
-                key={item.name}
+                key={item.name.en}
                 href={item.href}
                 passHref
                 className="text-text-drk font-semibold font-lexend-giga hover:underline hover:text-blk underline-offset-8 decoration-2 duration-200 ease-in"
               >
-                {item.name}
+                {item.name[lang]}
               </Link>
             );
           })}

@@ -16,8 +16,8 @@ function OurApproach() {
         className="w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${Cover.src})` }}
       >
-        <div className="w-full flex justify-center px-4 py-12 lg:px-12 lg:py-16 text-ivory bg-blk/55">
-          <h1 className="text-xl lg:text-6xl font-black w-full text-center whitespace-pre-line font-lexend-giga px-4">
+        <div className="w-full h-60 md:h-92 flex items-center justify-center px-4 py-12 lg:px-12 lg:py-16 text-ivory bg-blk/55">
+          <h1 className="text-2xl lg:text-6xl font-black w-full text-center whitespace-pre-line font-lexend-giga px-4">
             {t.approach.title}
           </h1>
         </div>
@@ -27,15 +27,15 @@ function OurApproach() {
         {t.approach.intro}
       </p>
 
-      <div className="flex flex-col items-start w-full gap-12 lg:gap-0 bg-blk lg:bg-transparent">
+      <div className="flex flex-col items-start w-full gap-12 md:gap-0 bg-blk md:bg-transparent">
         {partners.map((partner, index) => {
           return (
             <div
               key={partner.title.en}
-              className="text-ivory lg:text-text-drk flex flex-col odd:lg:flex-row even:lg:flex-row-reverse items-start pb-12 lg:py-12 gap-4 lg:gap-12 lg:px-4"
+              className="text-ivory md:text-text-drk flex flex-col odd:md:flex-row even:md:flex-row-reverse items-start pb-12 gap-4 md:gap-4 lg:gap-12 md:px-4"
             >
               <div
-                className={`relative w-full h-svw lg:w-2/5 lg:h-96 lg:rounded-xl overflow-hidden ${
+                className={`relative w-full h-svw md:w-2/5 md:h-96 md:rounded-xl overflow-hidden ${
                   index % 2 === 0 ? "leftSlideIn" : "rightSlideIn"
                 }`}
               >
@@ -48,7 +48,7 @@ function OurApproach() {
               </div>
 
               <div
-                className={`flex flex-col gap-4 lg:py-12 max-w-full lg:max-w-3/5 px-4 ${
+                className={`flex flex-col gap-4 md:py-12 max-w-full md:max-w-3/5 px-4 ${
                   index % 2 === 0 ? "rightSlideIn" : "leftSlideIn"
                 }`}
               >

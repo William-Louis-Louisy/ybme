@@ -6,7 +6,6 @@ import Image from "next/image";
 function Logo() {
   return (
     <Link href={"/"}>
-      {/* <span className="uppercase font-lexend-giga text-2xl">YBME</span> */}
       <Image src={LogoImg} alt="logo" width={100} height={100} />
     </Link>
   );
